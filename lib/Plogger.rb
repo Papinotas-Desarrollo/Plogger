@@ -18,31 +18,31 @@ module Plogger
     @@config = config
   end
 
-  def self.exception(exception, category: '', user_id: '', account_id: '', extra_info: {})
+  def self.exception(exception, type: '', category: '', user_id: '', account_id: '', extra_info: {})
     handler = Plogger::Handler.new(config)
     handler.handle_exception(exception, category: category, user_id: user_id, account_id: account_id,
                                         extra_info: extra_info)
   end
 
-  def self.error(message, category: '', user_id: '', account_id: '', extra_info: {})
+  def self.error(message, type: '', category: '', user_id: '', account_id: '', extra_info: {})
     handler = Plogger::Handler.new(config)
     handler.handle_error(message, category: category, user_id: user_id, account_id: account_id,
                                   extra_info: extra_info)
   end
 
-  def self.warn(message, category: '', user_id: '', account_id: '', extra_info: {})
+  def self.warn(message, type: '', category: '', user_id: '', account_id: '', extra_info: {})
     handler = Plogger::Handler.new(config)
     handler.handle_warning(message, category: category, user_id: user_id, account_id: account_id,
                                   extra_info: extra_info)
   end
 
-  def self.info(message, category: '', user_id: '', account_id: '', extra_info: {})
+  def self.info(message, type: '', category: '', user_id: '', account_id: '', extra_info: {})
     handler = Plogger::Handler.new(config)
     handler.handle_info(message, category: category, user_id: user_id, account_id: account_id,
                                   extra_info: extra_info)
   end
 
-  def self.debug(message, category: '', user_id: '', account_id: '', extra_info: {})
+  def self.debug(message, type: '', category: '', user_id: '', account_id: '', extra_info: {})
     handler = Plogger::Handler.new(config)
     handler.handle_debug(message, category: category, user_id: user_id, account_id: account_id,
                                   extra_info: extra_info)
