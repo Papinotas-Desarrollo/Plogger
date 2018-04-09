@@ -4,6 +4,10 @@
 
 Plogger stands for Papinotas Logger or Phoenix Logger (our current project, which raised the need for this gem). Plogger is a simple logging gem which receives a little more information than `Rails.Logger`, and can also send an exception to third party APIs (currently only Raven is supported). Plogger outputs the log in a parser friendly format, ready for other software such as Logstash to process it.
 
+## Instalation
+
+Add `gem 'plogger'` to your gemfile.
+
 ## Configuring
 
 ```ruby
@@ -51,5 +55,5 @@ Example call:
 
 ```ruby
 Plogger.info("Processing ready", type: 'user', category: "Bundle Creation", user_id: 1, extra_info: {happy: "yes"})
-# Will output 'Processing ready -- type='user' category='Bundle Creation' user_id=1 happy='yes'
+# Will output 'Processing ready -- trace=194fjx43gp type='user' category='Bundle Creation' user_id=1 happy='yes'
 ```

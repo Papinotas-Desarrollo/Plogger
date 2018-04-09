@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'Plogger/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "Plogger"
+  spec.name          = "plogger"
   spec.version       = Plogger::VERSION
   spec.authors       = ["Daniel Merrill"]
   spec.email         = ["daniel@papinotas.com"]
