@@ -1,6 +1,6 @@
-require "Plogger/version"
-require 'Plogger/config'
-require 'Plogger/handler'
+require "plogger/version"
+require 'plogger/config'
+require 'plogger/handler'
 require 'logger'
 
 module Plogger

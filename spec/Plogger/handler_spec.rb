@@ -1,6 +1,6 @@
 require "spec_helper"
-require 'Plogger/config'
-require 'Plogger/id_generator'
+require 'plogger/config'
+require 'plogger/id_generator'
 
 describe Plogger::Handler do
   before(:each) do

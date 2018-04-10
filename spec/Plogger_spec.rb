@@ -1,5 +1,5 @@
 require "spec_helper"
-require 'Plogger/id_generator'
+require 'plogger/id_generator'
 
 describe Plogger do
   it "has a version number" do

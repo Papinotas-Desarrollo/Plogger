@@ -1,5 +1,5 @@
-require 'Plogger/id_generator'
-require 'Plogger/formatter'
+require 'plogger/id_generator'
+require 'plogger/formatter'
 
 module Plogger
   class Handler
