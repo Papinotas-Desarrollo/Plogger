@@ -1,7 +1,7 @@
 module Plogger
   class Formatter
     def self.format(message, trace, type: 'system', user_id: nil, account_id: nil, category: '', extra_info: {})
-      result = "#{message} -- trace='#{trace}'"
+      result = "#{message} -- trace='#{trace}' log_provider='plogger'"
       args = {type: type, category: category, user_id: user_id, account_id: account_id}
       args.each do |key, value|
         result = add_param_to_message(result, key, value) unless value.nil?
