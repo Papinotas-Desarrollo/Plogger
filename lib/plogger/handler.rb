@@ -6,15 +6,9 @@ module Plogger
     def initialize(config)
       @logger = config.logger
       @module = config.module
-      @raven_dsn = config.raven_dsn
     end
 
     def handle_exception(exception, type: '', category: '', user_id: nil, account_id: nil, extra_info: {})
-      unless @raven_dsn == nil || @raven_dsn.blank?
-        Raven.user_context(id: user_id)
-        Raven.tags_context(account_id: account_id)
-        Raven.capture_exception(exception)
-      end
       handle_error(exception.message, category: category, user_id: user_id, account_id: account_id,
                                       extra_info: extra_info, type: type)
     end

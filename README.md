@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Plogger stands for Papinotas Logger or Phoenix Logger (our current project, which raised the need for this gem). Plogger is a simple logging gem which receives a little more information than `Rails.Logger`, and can also send an exception to third party APIs (currently only Raven is supported). Plogger outputs the log in a parser friendly format, ready for other software such as Logstash to process it.
+Plogger stands for Papinotas Logger or Phoenix Logger (our current project, which raised the need for this gem). Plogger is a simple logging gem which receives a little more information than `Rails.Logger`. Plogger outputs the log in a parser friendly format, ready for other software such as Logstash to process it.
 
 ## Instalation
 
@@ -16,7 +16,6 @@ Rails.application.configure do
   Plogger.configure do |config|
     config.logger = ActiveSupport::Logger.new(STDOUT) # Or whatever logger you want to configure
     config.module = 'MainModule' # Optional
-    config.raven_dsn = 'http://public:secret@example.com/project-id' # Optional
   end
 end
 ```

@@ -1,6 +1,6 @@
 module Plogger
   class Config
-    attr_accessor :raven_dsn, :logger, :module
+    attr_accessor :logger, :module
 
     def initialize(logger)
       @logger = logger
